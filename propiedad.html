@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Detalle de Propiedad | Nida Yalico Asesoría Inmobiliaria</title>
+    <meta id="pageMetaDesc" name="description" content="Ficha técnica detallada de la propiedad con Nida Yalico. Cono Norte de Lima.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#111d33',
+                            900: '#0b1526',
+                            950: '#060c17'
+                        },
+                        gold: {
+                            400: '#dfb74a',
+                            500: '#cba135',
+                            600: '#b38b24',
+                            700: '#946f17'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FontAwesome CDN (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- TOP BAR -->
+    <div class="bg-navy-950 text-slate-300 text-xs py-2 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2 text-gold-400">
+                <i class="fa-solid fa-location-dot"></i> <span>Especialista en Cono Norte de Lima • Yalimak Inmobiliaria</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+51937076066" class="hover:text-gold-400 transition flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-gold-400"></i> +51 937 076 066
+                </a>
+                <a href="https://www.facebook.com/nida.yalico.9/" target="_blank" rel="noopener" class="hover:text-gold-400 transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@nidayalico" target="_blank" rel="noopener" class="hover:text-gold-400 transition"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full bg-gradient-gold flex items-center justify-center text-navy-950 font-serif font-black text-xl shadow-md border-2 border-white/20">
+                        NY
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-xl sm:text-2xl text-white tracking-tight group-hover:text-gold-400 transition">
+                            Nida Yalico
+                        </span>
+                        <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">
+                            Asesoría Inmobiliaria
+                        </span>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-200">
+                    <a href="index.html" class="hover:text-gold-400 transition">Inicio</a>
+                    <a href="index.html#catalogo" class="text-gold-400 font-semibold transition">Propiedades</a>
+                    <a href="index.html#servicios" class="hover:text-gold-400 transition">Vende con Nida</a>
+                    <a href="index.html#sobre-mi" class="hover:text-gold-400 transition">Sobre Nida</a>
+                    <a href="index.html#contacto" class="hover:text-gold-400 transition">Contacto</a>
+                </nav>
+
+                <div class="flex items-center gap-3">
+                    <a href="index.html#catalogo" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-semibold transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Volver al Catálogo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMBS -->
+    <div class="bg-white border-b border-slate-200 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-500 flex items-center gap-2 flex-wrap">
+            <a href="index.html" class="hover:text-navy-950 transition"><i class="fa-solid fa-house"></i> Inicio</a>
+            <span>/</span>
+            <a href="index.html#catalogo" class="hover:text-navy-950 transition">Propiedades en Cono Norte</a>
+            <span>/</span>
+            <span id="breadcrumbTitle" class="text-slate-800 font-semibold truncate max-w-xs sm:max-w-md">Cargando propiedad...</span>
+        </div>
+    </div>
+
+    <!-- MAIN PROPERTY CONTENT CONTAINER -->
+    <main class="py-8 sm:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- HEADER INFO OF PROPERTY -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+                <div>
+                    <div class="flex items-center gap-2.5 mb-2.5 flex-wrap">
+                        <span id="propBadge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide bg-gold-100 text-gold-700 border border-gold-300">
+                            Destacado
+                        </span>
+                        <span id="propOperation" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide bg-navy-950 text-white">
+                            Venta
+                        </span>
+                        <span id="propCode" class="text-xs font-mono font-semibold text-slate-500 bg-slate-200/80 px-2.5 py-1 rounded-md">
+                            Ref: NY-101
+                        </span>
+                    </div>
+                    <h1 id="propTitle" class="text-2xl sm:text-4xl font-serif font-bold text-navy-950 leading-tight">
+                        Cargando título de la propiedad...
+                    </h1>
+                    <p id="propAddress" class="text-slate-500 text-sm sm:text-base mt-2 flex items-center gap-1.5">
+                        <i class="fa-solid fa-location-dot text-gold-600"></i>
+                        <span>Cargando ubicación...</span>
+                    </p>
+                </div>
+
+                <!-- PRICE BOX -->
+                <div class="bg-navy-950 text-white p-5 rounded-2xl shadow-lg border border-gold-500/20 min-w-[240px]">
+                    <div class="text-xs text-slate-300 font-medium uppercase tracking-wider">Precio de Publicación</div>
+                    <div id="propPriceUSD" class="text-3xl font-serif font-bold text-gradient-gold mt-1">
+                        $000,000
+                    </div>
+                    <div id="propPricePEN" class="text-xs text-slate-300 mt-1">
+                        Aprox. S/ 000,000 PEN
+                    </div>
+                </div>
+            </div>
+
+            <!-- GALLERY & MEDIA SECTION -->
+            <div class="mb-10">
+                <!-- MAIN BIG IMAGE -->
+                <div class="relative rounded-3xl overflow-hidden shadow-xl bg-slate-900 aspect-[16/9] md:aspect-[21/9] max-h-[550px] group">
+                    <img id="mainGalleryImage" src="" alt="Propiedad" class="w-full h-full object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+                    
+                    <!-- PHOTO BADGE -->
+                    <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white text-xs px-3.5 py-1.5 rounded-full flex items-center gap-2">
+                        <i class="fa-solid fa-camera"></i> <span id="photoCounter">1 / 4 Fotos</span>
+                    </div>
+
+                    <!-- SHARE BUTTONS OVERLAY -->
+                    <div class="absolute top-4 right-4 flex items-center gap-2">
+                        <button onclick="shareOnWhatsApp()" class="w-10 h-10 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center transition shadow-lg" title="Compartir en WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </button>
+                        <button onclick="copyPropertyLink()" class="w-10 h-10 rounded-full bg-white/80 hover:bg-white text-navy-950 flex items-center justify-center transition shadow-lg" title="Copiar enlace">
+                            <i class="fa-solid fa-link text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- THUMBNAILS CAROUSEL -->
+                <div id="thumbnailsContainer" class="grid grid-cols-4 sm:grid-cols-6 gap-3 mt-4">
+                    <!-- Dinámico con JS -->
+                </div>
+            </div>
+
+            <!-- DETAILS LAYOUT (2 COLUMNS: SPECS & STICKY CONTACT) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+                <!-- LEFT COLUMN: SPECS, DESCRIPTION, FEATURES & CALCULATOR -->
+                <div class="lg:col-span-8 space-y-10">
+                    
+                    <!-- KEY HIGHLIGHTS STATS BAR -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-6">Características Principales</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+                            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                <i class="fa-solid fa-ruler-combined text-2xl text-gold-600 mb-2"></i>
+                                <div id="specArea" class="font-bold text-navy-950 text-lg">-- m²</div>
+                                <div class="text-xs text-slate-500">Área de Terreno</div>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                <i class="fa-solid fa-bed text-2xl text-gold-600 mb-2"></i>
+                                <div id="specBedrooms" class="font-bold text-navy-950 text-lg">--</div>
+                                <div class="text-xs text-slate-500">Dormitorios</div>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                <i class="fa-solid fa-bath text-2xl text-gold-600 mb-2"></i>
+                                <div id="specBathrooms" class="font-bold text-navy-950 text-lg">--</div>
+                                <div class="text-xs text-slate-500">Baños</div>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                <i class="fa-solid fa-car text-2xl text-gold-600 mb-2"></i>
+                                <div id="specParking" class="font-bold text-navy-950 text-lg">--</div>
+                                <div class="text-xs text-slate-500">Cocheras</div>
+                            </div>
+                        </div>
+
+                        <!-- SECONDARY SPECS LIST -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-slate-100 text-xs sm:text-sm">
+                            <div><span class="text-slate-400">Área Construida:</span> <strong id="specBuiltArea" class="text-navy-950 font-semibold">-- m²</strong></div>
+                            <div><span class="text-slate-400">Pisos / Niveles:</span> <strong id="specFloors" class="text-navy-950 font-semibold">--</strong></div>
+                            <div><span class="text-slate-400">Antigüedad:</span> <strong id="specAntiquity" class="text-navy-950 font-semibold">--</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- DESCRIPTION SECTION -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-serif font-bold text-navy-950 mb-4">Descripción del Inmueble</h3>
+                        <div id="propFullDescription" class="text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                            <!-- Inyectado vía JS -->
+                        </div>
+                    </div>
+
+                    <!-- AMENITIES & HIGHLIGHTS CHECKLIST -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-serif font-bold text-navy-950 mb-4">Beneficios y Equipamiento</h3>
+                        <div id="propFeaturesList" class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                            <!-- Inyectado vía JS -->
+                        </div>
+                    </div>
+
+                    <!-- SIMULADOR DE CRÉDITO HIPOTECARIO (INTERACTIVO) -->
+                    <div class="bg-gradient-to-br from-slate-900 to-navy-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-gold-500/30">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-serif font-bold text-white">Simulador de Cuota Hipotecaria</h3>
+                                <p class="text-xs text-slate-400">Calcula tu cuota mensual estimada para este inmueble en Perú</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Cuota Inicial (%)</label>
+                                <select id="calcDownPaymentPct" class="w-full bg-navy-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-gold-500">
+                                    <option value="10">10% de Inicial</option>
+                                    <option value="20" selected>20% de Inicial (Recomendado)</option>
+                                    <option value="30">30% de Inicial</option>
+                                    <option value="50">50% de Inicial</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Plazo del Crédito</label>
+                                <select id="calcLoanYears" class="w-full bg-navy-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-gold-500">
+                                    <option value="10">10 Años (120 meses)</option>
+                                    <option value="15">15 Años (180 meses)</option>
+                                    <option value="20" selected>20 Años (240 meses)</option>
+                                    <option value="25">25 Años (300 meses)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Tasa Referencial Anual (TEA)</label>
+                                <input type="number" id="calcInterestRate" step="0.1" value="8.5" class="w-full bg-navy-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-gold-500">
+                            </div>
+                        </div>
+
+                        <!-- RESULTADO ESTIMADO -->
+                        <div class="bg-navy-900/90 rounded-2xl p-4 sm:p-6 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div>
+                                <div class="text-xs text-slate-400 uppercase font-semibold">Cuota Mensual Estimada</div>
+                                <div id="calcMonthlyPaymentUSD" class="text-2xl sm:text-3xl font-serif font-bold text-gold-400 mt-1">$0 / mes</div>
+                                <div id="calcMonthlyPaymentPEN" class="text-xs text-slate-400">Aprox. S/ 0 / mes</div>
+                            </div>
+                            <button onclick="consultMortgageWithNida()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-gold hover:bg-gold-600 text-navy-950 font-bold text-xs sm:text-sm transition flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-base"></i>
+                                <span>Consultar Calificación Bancaria con Nida</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT COLUMN: STICKY AGENT & SCHEDULE VISIT -->
+                <div class="lg:col-span-4">
+                    <div class="sticky top-28 space-y-6">
+                        
+                        <!-- ASESORA CARD -->
+                        <div class="bg-white rounded-3xl p-6 shadow-lg border border-slate-200">
+                            <div class="flex items-center gap-4 mb-5 pb-5 border-b border-slate-100">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Nida Yalico" class="w-16 h-16 rounded-2xl object-cover border-2 border-gold-500 shadow-sm">
+                                <div>
+                                    <h4 class="font-serif font-bold text-lg text-navy-950">Nida Yalico</h4>
+                                    <p class="text-xs text-gold-600 font-semibold">Asesora Inmobiliaria Exclusiva</p>
+                                    <p class="text-[11px] text-slate-400">Cono Norte de Lima</p>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-slate-600 mb-6 leading-relaxed">
+                                ¿Deseas visitar este inmueble o revisar la partida registral en Sunarp? Coordina directamente con Nida sin intermediarios.
+                            </p>
+
+                            <!-- WHATSAPP DIRECT CTA -->
+                            <a id="btnDirectWhatsApp" href="#" target="_blank" class="w-full py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm transition flex items-center justify-center gap-2 shadow-lg mb-3">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Agendar Visita por WhatsApp</span>
+                            </a>
+
+                            <!-- PHONE CALL BUTTON -->
+                            <a href="tel:+51937076066" class="w-full py-3 rounded-2xl bg-slate-100 hover:bg-slate-200 text-navy-950 font-bold text-xs sm:text-sm transition flex items-center justify-center gap-2 border border-slate-200">
+                                <i class="fa-solid fa-phone text-gold-600"></i>
+                                <span>Llamar a Nida (+51 937 076 066)</span>
+                            </a>
+
+                            <!-- SCHEDULE VISIT FORM -->
+                            <div class="mt-6 pt-6 border-t border-slate-100">
+                                <h5 class="font-bold text-xs uppercase tracking-wider text-slate-700 mb-3">Solicitar que Nida me llame</h5>
+                                <form id="detailContactForm" class="space-y-3">
+                                    <input type="text" id="dfName" required placeholder="Tu nombre" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                                    <input type="tel" id="dfPhone" required placeholder="Tu teléfono / WhatsApp" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                                    <button type="submit" class="w-full py-2.5 rounded-xl bg-navy-950 hover:bg-navy-800 text-white text-xs font-bold transition">
+                                        Enviar Solicitud
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- GARANTÍA DE SEGURIDAD LEGAL -->
+                        <div class="bg-amber-50/60 rounded-3xl p-5 border border-amber-200/80 text-xs text-amber-900 space-y-2">
+                            <div class="font-bold flex items-center gap-1.5 text-amber-950 text-sm">
+                                <i class="fa-solid fa-shield-halved text-amber-700"></i> Garantía Inmobiliaria
+                            </div>
+                            <p class="leading-relaxed">
+                                Esta propiedad cuenta con estudio de títulos previo para asegurar una compraventa transparente y sin sorpresas.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- OTHER RECOMMENDED PROPERTIES -->
+            <div class="mt-20 pt-12 border-t border-slate-200">
+                <div class="flex items-center justify-between mb-8">
+                    <div>
+                        <span class="text-gold-600 font-bold text-xs uppercase tracking-wider block">Otras Opciones</span>
+                        <h3 class="text-2xl font-serif font-bold text-navy-950">Propiedades Similares en Cono Norte</h3>
+                    </div>
+                    <a href="index.html#catalogo" class="text-xs sm:text-sm font-bold text-navy-950 hover:text-gold-600 transition flex items-center gap-1">
+                        <span>Ver todas</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div id="relatedPropertiesGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Dinámico con JS -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 text-xs py-10 border-t border-white/10 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <div class="font-serif font-bold text-lg text-white">Nida Yalico - Asesoría Inmobiliaria</div>
+            <p>Especialista en Cono Norte de Lima • Yalimak Inmobiliaria</p>
+            <p>&copy; 2026 Nida Yalico. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE INTELIGENTE DE WHATSAPP -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a id="floatingWaDetailBtn" href="https://wa.me/51937076066" target="_blank" class="wa-float-btn w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-3xl shadow-xl transition transform hover:scale-105" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
+    <script src="js/property-detail.js"></script>
+</body>
+</html>

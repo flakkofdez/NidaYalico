@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nida Yalico | Asesoría Inmobiliaria en Cono Norte de Lima</title>
+    <meta name="description" content="Encuentra tu casa, departamento o terreno en Los Olivos, SMP, Comas y Carabayllo con Nida Yalico. Asesoría inmobiliaria profesional, segura y personalizada.">
+    <meta property="og:title" content="Nida Yalico | Asesoría Inmobiliaria Cono Norte">
+    <meta property="og:description" content="Propiedades exclusivas en venta y alquiler en Cono Norte de Lima. Asesoría integral con Nida Yalico.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#111d33',
+                            900: '#0b1526',
+                            950: '#060c17'
+                        },
+                        gold: {
+                            400: '#dfb74a',
+                            500: '#cba135',
+                            600: '#b38b24',
+                            700: '#946f17'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Heroicons / FontAwesome CDN (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-navy-950 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5 text-gold-400 font-medium">
+                    <i class="fa-solid fa-location-dot"></i> Especialista en Cono Norte de Lima
+                </span>
+                <span class="hidden md:inline text-slate-400">|</span>
+                <span class="hidden md:inline text-slate-300">Los Olivos • SMP • Comas • Carabayllo</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+51937076066" class="hover:text-gold-400 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-gold-400"></i> +51 937 076 066
+                </a>
+                <a href="https://www.facebook.com/nida.yalico.9/" target="_blank" rel="noopener" class="hover:text-gold-400 transition" title="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.tiktok.com/@nidayalico" target="_blank" rel="noopener" class="hover:text-gold-400 transition" title="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER & NAVIGATION -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-white/10 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO / PERSONAL BRAND -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full bg-gradient-gold flex items-center justify-center text-navy-950 font-serif font-black text-xl shadow-md border-2 border-white/20">
+                        NY
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-xl sm:text-2xl text-white tracking-tight group-hover:text-gold-400 transition">
+                            Nida Yalico
+                        </span>
+                        <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">
+                            Asesoría Inmobiliaria
+                        </span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAV -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-200">
+                    <a href="index.html" class="text-gold-400 font-semibold transition hover:text-white">Inicio</a>
+                    <a href="#catalogo" class="hover:text-gold-400 transition">Propiedades</a>
+                    <a href="#servicios" class="hover:text-gold-400 transition">Vende tu Inmueble</a>
+                    <a href="#sobre-mi" class="hover:text-gold-400 transition">Sobre Nida</a>
+                    <a href="#contacto" class="hover:text-gold-400 transition">Contacto</a>
+                </nav>
+
+                <!-- CONTACT CTA BUTTON -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/51937076066?text=Hola%20Nida,%20deseo%20asesor%C3%ADa%20inmobiliaria" target="_blank" class="px-5 py-2.5 rounded-full bg-gradient-gold text-navy-950 font-semibold text-sm flex items-center gap-2 gold-glow transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Hablar con Nida</span>
+                    </a>
+                </div>
+
+                <!-- MOBILE HAMBURGER BUTTON -->
+                <button id="mobileMenuBtn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 focus:outline-none" aria-label="Abrir Menú">
+                    <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobileMenu" class="hidden md:hidden bg-navy-900 border-b border-white/10 px-4 pt-3 pb-6 space-y-3">
+            <a href="index.html" class="block py-2 text-gold-400 font-semibold">Inicio</a>
+            <a href="#catalogo" class="block py-2 text-slate-200 hover:text-gold-400">Propiedades en Venta y Alquiler</a>
+            <a href="#servicios" class="block py-2 text-slate-200 hover:text-gold-400">Vende o Alquila tu Propiedad</a>
+            <a href="#sobre-mi" class="block py-2 text-slate-200 hover:text-gold-400">Sobre Nida Yalico</a>
+            <a href="#contacto" class="block py-2 text-slate-200 hover:text-gold-400">Contacto Directo</a>
+            <div class="pt-3">
+                <a href="https://wa.me/51937076066?text=Hola%20Nida,%20deseo%20asesor%C3%ADa%20inmobiliaria" target="_blank" class="w-full py-3 rounded-xl bg-gradient-gold text-navy-950 font-bold text-center flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Contactar por WhatsApp (+51 937 076 066)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH INTEGRATED SEARCH -->
+    <section class="relative bg-navy-pattern text-white pt-16 pb-28 md:pt-24 md:pb-36 overflow-hidden">
+        <!-- Ambient lighting elements -->
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-gold-500/30 text-gold-400 text-xs sm:text-sm font-semibold mb-6">
+                    <i class="fa-solid fa-shield-halved"></i> Seguridad Legal y Asesoría Inmobiliaria Profesional
+                </div>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+                    Encuentra tu próximo hogar o inversión en <span class="text-gradient-gold">Cono Norte</span>
+                </h1>
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+                    Acompañamiento integral en compra, venta y alquiler de casas, departamentos y terrenos en Los Olivos, San Martín de Porres, Comas y Carabayllo.
+                </p>
+            </div>
+
+            <!-- SEARCH BAR BOX -->
+            <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-2xl border border-white/40 text-slate-800">
+                <form id="heroSearchForm" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- OPERACIÓN -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                            <i class="fa-solid fa-handshake text-gold-600 mr-1"></i> Operación
+                        </label>
+                        <select id="heroSearchOperation" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-medium focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                            <option value="">Todas (Venta y Alquiler)</option>
+                            <option value="Venta">En Venta</option>
+                            <option value="Alquiler">En Alquiler</option>
+                        </select>
+                    </div>
+
+                    <!-- TIPO DE INMUEBLE -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                            <i class="fa-solid fa-building text-gold-600 mr-1"></i> Tipo de Propiedad
+                        </label>
+                        <select id="heroSearchType" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-medium focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                            <option value="">Todos los tipos</option>
+                            <option value="Casa">Casas</option>
+                            <option value="Departamento">Departamentos</option>
+                            <option value="Terreno">Terrenos / Lotes</option>
+                            <option value="Comercial">Locales Comerciales</option>
+                        </select>
+                    </div>
+
+                    <!-- DISTRITO (CONO NORTE) -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                            <i class="fa-solid fa-map-pin text-gold-600 mr-1"></i> Zona / Distrito
+                        </label>
+                        <select id="heroSearchDistrict" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-medium focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                            <option value="">Todo Cono Norte</option>
+                            <option value="Los Olivos">Los Olivos</option>
+                            <option value="San Martín de Porres">San Martín de Porres</option>
+                            <option value="Comas">Comas</option>
+                            <option value="Carabayllo">Carabayllo</option>
+                        </select>
+                    </div>
+
+                    <!-- BOTÓN BUSCAR -->
+                    <div class="flex items-end">
+                        <button type="submit" class="w-full h-[44px] bg-gradient-gold hover:bg-gold-600 text-navy-950 font-bold rounded-xl transition flex items-center justify-center gap-2 gold-glow">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Buscar Inmuebles</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- TRUST METRICS -->
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center max-w-4xl mx-auto">
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">8+ Años</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1">Experiencia en Cono Norte</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1">Seguridad en Sunarp</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">150+</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1">Operaciones Asesoradas</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">Atención Directa</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1">Con Nida Yalico</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPIEDADES CATALOGO SECTION -->
+    <section id="catalogo" class="py-20 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-gold-600 font-bold text-xs sm:text-sm uppercase tracking-widest block mb-2">
+                        Catálogo Exclusivo
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-navy-950 font-serif">
+                        Propiedades Destacadas en Cono Norte
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base mt-2">
+                        Inmuebles verificados legalmente y listos para transferir o habitar.
+                    </p>
+                </div>
+
+                <!-- CATEGORY PILLS -->
+                <div class="flex flex-wrap items-center gap-2" id="filterPills">
+                    <button class="filter-pill active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-navy-950 text-white shadow" data-filter="all">
+                        Todas
+                    </button>
+                    <button class="filter-pill px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-filter="Venta">
+                        En Venta
+                    </button>
+                    <button class="filter-pill px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-filter="Alquiler">
+                        En Alquiler
+                    </button>
+                    <button class="filter-pill px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-filter="Casa">
+                        Casas
+                    </button>
+                    <button class="filter-pill px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-filter="Departamento">
+                        Departamentos
+                    </button>
+                    <button class="filter-pill px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-filter="Terreno">
+                        Terrenos
+                    </button>
+                </div>
+            </div>
+
+            <!-- PROPERTY GRID (RENDERED VIA APP.JS) -->
+            <div id="propertiesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Se inyecta dinámicamente con JavaScript -->
+            </div>
+
+            <!-- EMPTY RESULTS MESSAGE -->
+            <div id="noResultsMsg" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-200 shadow-sm">
+                <i class="fa-solid fa-house-chimney-crack text-5xl text-slate-300 mb-4"></i>
+                <h3 class="text-xl font-bold text-slate-700 font-serif mb-2">No se encontraron propiedades con estos filtros</h3>
+                <p class="text-slate-500 max-w-md mx-auto mb-6 text-sm">
+                    ¿Buscas algo específico en Los Olivos, SMP o Comas? Escríbele a Nida Yalico para que busque una opción a tu medida.
+                </p>
+                <button onclick="resetFilters()" class="px-6 py-2.5 rounded-full bg-navy-950 text-white font-semibold text-sm hover:bg-navy-800 transition">
+                    Ver todas las propiedades
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: VENDE O ALQUILA TU PROPIEDAD CON NIDA YALICO (CAPTACIÓN) -->
+    <section id="servicios" class="py-20 bg-navy-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="inline-block px-3.5 py-1.5 rounded-full bg-gold-500/20 text-gold-400 font-semibold text-xs tracking-wider uppercase border border-gold-500/30">
+                        Propietarios en Cono Norte
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-bold font-serif leading-tight">
+                        ¿Quieres vender o alquilar tu inmueble al <span class="text-gradient-gold">mejor precio</span>?
+                    </h2>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        Vender una propiedad en Cono Norte requiere estrategia de mercado, difusión en redes masivas, calificación rigurosa de compradores y blindaje legal en Notaría y Registros Públicos.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Opinión de Valor y Estudio de Mercado Gratuito</h4>
+                                <p class="text-slate-400 text-sm">Determinamos el precio real y competitivo de tu propiedad para que no pierdas dinero ni tiempo.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Publicidad de Alto Impacto en TikTok y Redes</h4>
+                                <p class="text-slate-400 text-sm">Videos profesionales, fotografía de calidad y campañas pagadas directas a compradores calificados.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                                <i class="fa-solid fa-file-contract"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Acompañamiento Notarial y Bancario Total</h4>
+                                <p class="text-slate-400 text-sm">Revisión de títulos en Sunarp, minuta, trámite de alcabala y cierre seguro hasta la entrega de llaves.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAPTACIÓN FORM -->
+                <div class="lg:col-span-6">
+                    <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-2xl text-slate-800 border border-slate-100">
+                        <h3 class="font-serif text-2xl font-bold text-navy-950 mb-2">Solicita una Evaluación de tu Inmueble</h3>
+                        <p class="text-slate-500 text-sm mb-6">Completa tus datos y Nida Yalico se comunicará contigo de manera confidencial.</p>
+
+                        <form id="ownerLeadForm" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Nombre y Apellidos</label>
+                                <input type="text" id="ownerName" required placeholder="Ej: Juan Pérez" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Teléfono / WhatsApp</label>
+                                    <input type="tel" id="ownerPhone" required placeholder="Ej: 999 000 111" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Tipo de Inmueble</label>
+                                    <select id="ownerPropType" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                                        <option value="Casa">Casa</option>
+                                        <option value="Departamento">Departamento</option>
+                                        <option value="Terreno">Terreno / Lote</option>
+                                        <option value="Local Comercial">Local Comercial</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Distrito en Cono Norte</label>
+                                    <select id="ownerDistrict" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                                        <option value="Los Olivos">Los Olivos</option>
+                                        <option value="San Martín de Porres">San Martín de Porres</option>
+                                        <option value="Comas">Comas</option>
+                                        <option value="Carabayllo">Carabayllo</option>
+                                        <option value="Independencia">Independencia</option>
+                                        <option value="Puente Piedra">Puente Piedra</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Deseas</label>
+                                    <select id="ownerGoal" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                                        <option value="Vender">Vender mi inmueble</option>
+                                        <option value="Alquilar">Alquilar mi inmueble</option>
+                                        <option value="Tasación">Solo tasación referencial</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-gold hover:bg-gold-600 text-navy-950 font-bold transition flex items-center justify-center gap-2 gold-glow shadow-md">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Enviar Consulta Directa por WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NIDA YALICO SECTION -->
+    <section id="sobre-mi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- PHOTO / BRAND PRESENTATION -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md">
+                        <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-gold-500 to-navy-900 opacity-20 blur-xl"></div>
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Nida Yalico - Asesora Inmobiliaria" class="w-full h-full object-cover object-top">
+                            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent flex items-end p-6">
+                                <div class="text-white">
+                                    <h3 class="font-serif text-2xl font-bold">Nida Yalico</h3>
+                                    <p class="text-gold-400 text-sm font-semibold">Yalimak Inmobiliaria • Cono Norte</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FLOATING BADGE -->
+                        <div class="absolute -bottom-6 -right-4 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-gold-100 flex items-center justify-center text-gold-600 text-xl font-bold">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-navy-950 text-base">Asesoría de Confianza</div>
+                                <div class="text-xs text-slate-500">Trato transparente y honesto</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BIO & CONTENT -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-gold-600 font-bold text-xs sm:text-sm uppercase tracking-widest block">
+                        Conoce a tu Asesora
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-navy-950 font-serif leading-tight">
+                        Compromiso, experiencia y seguridad jurídica en cada operación
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Soy <strong>Nida Yalico</strong>, profesional del sector inmobiliario con amplia trayectoria asesorando a familias e inversionistas en la compra, venta y arrendamiento de inmuebles en los principales distritos del <strong>Cono Norte de Lima</strong>.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Mi misión es proteger tu patrimonio. Sé que adquirir o vender una propiedad representa el esfuerzo de toda una vida; por ello, realizo una minuciosa verificación registral y tributaria antes de cualquier transacción, garantizando una operación 100% libre de cargas y sin riesgos.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="border border-slate-200 rounded-2xl p-4 bg-slate-50">
+                            <i class="fa-solid fa-users text-gold-600 text-2xl mb-2"></i>
+                            <h4 class="font-bold text-navy-950 text-sm">Trato Personalizado</h4>
+                            <p class="text-slate-500 text-xs mt-1">Atención directa conmigo de inicio a fin.</p>
+                        </div>
+                        <div class="border border-slate-200 rounded-2xl p-4 bg-slate-50">
+                            <i class="fa-solid fa-scale-balanced text-gold-600 text-2xl mb-2"></i>
+                            <h4 class="font-bold text-navy-950 text-sm">Seguridad Legal</h4>
+                            <p class="text-slate-500 text-xs mt-1">CRI de Sunarp y contratos notariales claros.</p>
+                        </div>
+                    </div>
+
+                    <!-- SOCIAL BUTTONS -->
+                    <div class="pt-4 flex flex-wrap items-center gap-4">
+                        <a href="https://www.facebook.com/nida.yalico.9/" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm inline-flex items-center gap-2 transition shadow">
+                            <i class="fa-brands fa-facebook-f"></i> Seguir en Facebook
+                        </a>
+                        <a href="https://www.tiktok.com/@nidayalico" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-xl bg-black hover:bg-slate-900 text-white font-medium text-sm inline-flex items-center gap-2 transition shadow">
+                            <i class="fa-brands fa-tiktok"></i> Ver Videos en TikTok
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS SECTION -->
+    <section class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-gold-600 font-bold text-xs uppercase tracking-widest block mb-2">Testimonios Reales</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy-950 font-serif">Clientes que confiaron en Nida Yalico</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">La satisfacción y tranquilidad de las familias es nuestro mejor respaldo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- TESTIMONIO 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed italic mb-6">
+                            "Teníamos temor de vender nuestra casa en Los Olivos por tantas estafas que se escuchan. Nida se encargó de todo el papeleo en Sunarp y Notaría, filtró a los compradores y en menos de 45 días concretamos la venta al precio justo."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">FM</div>
+                        <div>
+                            <div class="font-bold text-navy-950 text-sm">Familia Mendoza</div>
+                            <div class="text-xs text-slate-500">Venta de Casa • Urb. Las Palmeras, Los Olivos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIO 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed italic mb-6">
+                            "Compré mi primer departamento en Covida gracias a la gestión de Nida. Me ayudó a calificar con el banco y me explicó cada cláusula de la minuta con total claridad. La recomiendo al 100% por su paciencia y honestidad."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">CR</div>
+                        <div>
+                            <div class="font-bold text-navy-950 text-sm">Carlos Ramos (Comprador)</div>
+                            <div class="text-xs text-slate-500">Departamento • Covida, Los Olivos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIO 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed italic mb-6">
+                            "Excelente alcance en redes sociales. Puso mi terreno en Carabayllo en venta y rápidamente me contactó con interesados reales con crédito pre-aprobado. Siempre puntual y muy profesional en cada reunión."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">RP</div>
+                        <div>
+                            <div class="font-bold text-navy-950 text-sm">Rosa Palacios</div>
+                            <div class="text-xs text-slate-500">Terreno • San Antonio de Carabayllo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO DIRECTO SECTION -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-navy-950 rounded-3xl overflow-hidden shadow-2xl p-8 sm:p-14 text-white relative">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <span class="text-gold-400 font-bold text-xs uppercase tracking-widest block mb-2">Comunícate Hoy Mismo</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold font-serif mb-4">¿Tienes dudas o buscas una propiedad especial?</h2>
+                        <p class="text-slate-300 text-sm sm:text-base mb-8">
+                            Nida Yalico atiende directamente consultas de compradores, propietarios e inversionistas en todo el Cono Norte de Lima.
+                        </p>
+
+                        <div class="space-y-4">
+                            <a href="https://wa.me/51937076066?text=Hola%20Nida,%20deseo%20hacer%20una%20consulta" target="_blank" class="flex items-center gap-4 p-3 rounded-2xl bg-white/5 hover:bg-white/10 transition border border-white/10">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400">WhatsApp Directo</div>
+                                    <div class="font-bold text-white text-base sm:text-lg">+51 937 076 066</div>
+                                </div>
+                            </a>
+
+                            <a href="mailto:nidayalicoyalimakinmobiliaria@gmail.com" class="flex items-center gap-4 p-3 rounded-2xl bg-white/5 hover:bg-white/10 transition border border-white/10">
+                                <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400">Correo Electrónico</div>
+                                    <div class="font-bold text-white text-sm sm:text-base break-all">nidayalicoyalimakinmobiliaria@gmail.com</div>
+                                </div>
+                            </a>
+
+                            <div class="flex items-center gap-4 p-3 rounded-2xl bg-white/5 border border-white/10">
+                                <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400">Cobertura Principal</div>
+                                    <div class="font-bold text-white text-sm sm:text-base">Los Olivos, SMP, Comas, Carabayllo y todo Lima Norte</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QUICK CONTACT FORM -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 text-slate-800">
+                        <h3 class="font-serif text-xl font-bold text-navy-950 mb-1">Envía un Mensaje Rápido</h3>
+                        <p class="text-slate-500 text-xs mb-4">Te responderemos a la brevedad por WhatsApp o teléfono.</p>
+
+                        <form id="quickContactForm" class="space-y-3.5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">Nombre</label>
+                                <input type="text" id="qcName" required placeholder="Tu nombre" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">Teléfono / WhatsApp</label>
+                                <input type="tel" id="qcPhone" required placeholder="Tu número" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">Mensaje o Inmueble de Interés</label>
+                                <textarea id="qcMessage" rows="3" placeholder="Hola Nida, me interesa comprar una casa en Los Olivos..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-gold-500 focus:outline-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 rounded-xl bg-gradient-gold hover:bg-gold-600 text-navy-950 font-bold transition flex items-center justify-center gap-2 gold-glow">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Enviar Consulta a WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 text-sm border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-gold flex items-center justify-center text-navy-950 font-serif font-black text-lg">
+                            NY
+                        </div>
+                        <span class="font-serif font-bold text-xl text-white">Nida Yalico</span>
+                    </div>
+                    <p class="text-slate-400 text-xs sm:text-sm max-w-md leading-relaxed">
+                        Asesoría Inmobiliaria y Gestión Integral en Cono Norte de Lima. Venta, alquiler, tasación y saneamiento legal de propiedades con total transparencia y seriedad.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://www.facebook.com/nida.yalico.9/" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-gold-500 hover:text-navy-950 text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@nidayalico" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-gold-500 hover:text-navy-950 text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-tiktok text-sm"></i>
+                        </a>
+                        <a href="https://wa.me/51937076066" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-emerald-500 hover:text-white text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Distritos de Cobertura</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#catalogo" onclick="filterByDistrict('Los Olivos')" class="hover:text-gold-400 transition">Los Olivos</a></li>
+                        <li><a href="#catalogo" onclick="filterByDistrict('San Martín de Porres')" class="hover:text-gold-400 transition">San Martín de Porres (SMP)</a></li>
+                        <li><a href="#catalogo" onclick="filterByDistrict('Comas')" class="hover:text-gold-400 transition">Comas</a></li>
+                        <li><a href="#catalogo" onclick="filterByDistrict('Carabayllo')" class="hover:text-gold-400 transition">Carabayllo</a></li>
+                        <li><a href="#catalogo" class="hover:text-gold-400 transition">Independencia y Puente Piedra</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Contacto</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-gold-400"></i>
+                            <a href="tel:+51937076066" class="hover:text-white transition">+51 937 076 066</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-envelope text-gold-400 mt-0.5"></i>
+                            <span class="break-all">nidayalicoyalimakinmobiliaria@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-gold-400"></i>
+                            <span>Lima Norte, Perú</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Nida Yalico - Asesoría Inmobiliaria (Yalimak). Todos los derechos reservados.</p>
+                <div class="flex items-center gap-4">
+                    <span>Transparencia y Seguridad Legal</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE INTELIGENTE DE WHATSAPP -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <!-- MENU DESPLEGABLE DE WHATSAPP -->
+        <div id="waMenu" class="hidden mb-3 w-72 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden text-slate-800 transition-all duration-300 transform origin-bottom-right">
+            <div class="bg-emerald-600 p-4 text-white">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 rounded-full bg-white text-emerald-600 flex items-center justify-center font-bold text-sm">
+                            NY
+                        </div>
+                        <div>
+                            <div class="font-bold text-sm">Nida Yalico</div>
+                            <div class="text-[11px] text-emerald-100 flex items-center gap-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-300 inline-block animate-pulse"></span> En línea ahora
+                            </div>
+                        </div>
+                    </div>
+                    <button id="closeWaMenu" class="text-white/80 hover:text-white text-lg">&times;</button>
+                </div>
+                <p class="text-xs text-emerald-50 mt-2">¿Cómo puedo ayudarte el día de hoy?</p>
+            </div>
+            <div class="p-3 space-y-2 text-xs">
+                <a href="https://wa.me/51937076066?text=Hola%20Nida,%20estoy%20buscando%20comprar%20o%20alquilar%20una%20propiedad%20en%20Cono%20Norte" target="_blank" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-100 transition border border-slate-100 text-slate-700 font-medium">
+                    <span class="text-base">🏡</span>
+                    <span>Quiero comprar un inmueble</span>
+                </a>
+                <a href="https://wa.me/51937076066?text=Hola%20Nida,%20soy%20propietario%20y%20deseo%20vender%20o%20alquilar%20mi%20inmueble" target="_blank" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-100 transition border border-slate-100 text-slate-700 font-medium">
+                    <span class="text-base">🔑</span>
+                    <span>Quiero vender mi propiedad</span>
+                </a>
+                <a href="https://wa.me/51937076066?text=Hola%20Nida,%20tengo%20una%20consulta%20inmobiliaria" target="_blank" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-100 transition border border-slate-100 text-slate-700 font-medium">
+                    <span class="text-base">💬</span>
+                    <span>Consulta o asesoría directa</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- BOTÓN DISPARADOR -->
+        <button id="toggleWaBtn" class="wa-float-btn w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-3xl shadow-xl transition transform hover:scale-105" aria-label="Abrir WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
